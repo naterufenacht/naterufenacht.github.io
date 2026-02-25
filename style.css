@@ -86,6 +86,12 @@ h1 {
     color: var(--primary);
 }
 
+h2 {
+    font-size: 28px;
+    color: var(--secondary);
+    margin-top: 10px;
+}
+
 .subtitle {
     color: var(--secondary);
     margin-top: 10px;
