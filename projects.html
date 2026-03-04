@@ -1,79 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- Page setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Projects | Nate Rufenacht</title>
 
+    <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
-<nav class="nav">
-    <div class="nav-container">
-        <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="NLR Logo">
-        </a>
+    <!-- Navigation -->
 
-        <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" target="_blank">About</a></li>
-            <li><a href="projects.html" target="_blank">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+    <nav class="nav">
+
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="NLR logo">
+            </a>
+
+            <!-- Nav links -->
+            <ul class="nav-list">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="projects.html">Projects</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <!-- Page heading -->
+
+        <header class="container hero">
+
+            <h1>Development Projects</h1>
+
+            <p class="subtitle">
+                JavaScript applications and API integrations
+            </p>
+
+        </header>
+
+
+        <!-- Weather App -->
+
+        <section class="container project-card">
+
+            <!-- Screenshot -->
+            <div class="project-image">
+
+                <img src="images/weather-screenshot.png"
+                     alt="Weather app screenshot">
+
+            </div>
+
+
+            <!-- Project details -->
+
+            <div class="project-content">
+
+                <h2>Weather API Application</h2>
+
+                <ul>
+
+                    <li>Fetch API used to retrieve weather data</li>
+
+                    <li>JSON responses rendered dynamically in the DOM</li>
+
+                    <li>Error handling for invalid locations</li>
+
+                </ul>
+
+
+                <!-- Project buttons -->
+
+                <div class="project-buttons">
+
+                    <a class="btn-primary"
+                       href="https://naterufenacht.github.io/weather_app/"
+                       target="_blank">
+                        Live Demo
+                    </a>
+
+                    <a class="btn-secondary"
+                       href="https://github.com/naterufenacht/weather_app"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Todo App -->
+
+        <section class="container project-card">
+
+            <!-- Screenshot -->
+
+            <div class="project-image">
+
+                <img src="images/todo_screenshot.png"
+                     alt="Todo application screenshot">
+
+            </div>
+
+
+            <!-- Project description -->
+
+            <div class="project-content">
+
+                <h2>Todo List Application</h2>
+
+                <ul>
+
+                    <li>Vanilla JavaScript task management</li>
+
+                    <li>CRUD operations for creating and updating tasks</li>
+
+                    <li>API communication using Fetch</li>
+
+                </ul>
+
+
+                <!-- Buttons -->
+
+                <div class="project-buttons">
+
+                    <a class="btn-primary"
+                       href="https://naterufenacht.github.io/todolist/"
+                       target="_blank">
+                        Live Demo
+                    </a>
+
+                    <a class="btn-secondary"
+                       href="https://github.com/naterufenacht/todolist"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Calculator -->
+
+        <section class="container project-card">
+
+            <!-- Screenshot -->
+
+            <div class="project-image">
+
+                <img src="images/calculator-screenshot.png"
+                     alt="JavaScript calculator screenshot">
+
+            </div>
+
+
+            <!-- Description -->
+
+            <div class="project-content">
+
+                <h2>JavaScript Calculator</h2>
+
+                <ul>
+
+                    <li>JavaScript arithmetic engine</li>
+
+                    <li>Event driven input handling</li>
+
+                    <li>Input validation for calculations</li>
+
+                </ul>
+
+
+                <!-- Buttons -->
+
+                <div class="project-buttons">
+
+                    <a class="btn-primary"
+                       href="https://naterufenacht.github.io/calculator_app/"
+                       target="_blank">
+                        Live Demo
+                    </a>
+
+                    <a class="btn-secondary"
+                       href="https://github.com/naterufenacht/calculator_app"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <footer id="contact" class="container footer">
+
+        <h2>Contact & Links</h2>
+
+        <ul class="footer-links">
+
+            <li>
+                <a href="https://github.com/naterufenacht" target="_blank">
+                    GitHub
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    LinkedIn
+                </a>
+            </li>
+
+            <li>
+                <a href="mailto:your.email@example.com">
+                    Email
+                </a>
+            </li>
+
         </ul>
-    </div>
-</nav>
 
-<main>
+    </footer>
 
-<header class="container hero">
-    <h1>Development Projects</h1>
-    <p class="subtitle">JavaScript, APIs and Full Project Builds</p>
-</header>
 
-<div class="divider"></div>
+    <!-- JavaScript -->
 
-<section class="container project-card">
-    <div class="project-image">
-        <img src="images/weather-screenshot.png" alt="Weather App">
-    </div>
-    <div class="project-content">
-        <h2>Weather API Application</h2>
-        <p>empty</p>
-    </div>
-</section>
-
-<section class="container project-card">
-    <div class="project-image">
-        <img src="images/todo_screenshot.png" alt="To Do App">
-    </div>
-    <div class="project-content">
-        <h2>To-Do List API Application</h2>
-        <p>empty</p>
-    </div>
-</section>
-
-<section class="container project-card">
-    <div class="project-image">
-        <img src="images/calculator-screenshot.png" alt="Calculator App">
-    </div>
-    <div class="project-content">
-        <h2>JavaScript Calculator</h2>
-        <p>empty</p>
-    </div>
-</section>
-
-</main>
-
-<footer id="contact" class="container footer">
-    <h2>Contact & Links</h2>
-    <ul class="footer-links">
-        <li><a href="https://github.com/naterufenacht" target="_blank">GitHub</a></li>
-        <li><a href="#" target="_blank">LinkedIn</a></li>
-        <li><a href="mailto:your.email@example.com">Email</a></li>
-    </ul>
-</footer>
+    <script src="script.js"></script>
 
 </body>
 </html>

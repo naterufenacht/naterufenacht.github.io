@@ -3,7 +3,6 @@
     --secondary: #3A6EA5;
     --accent: #A9B8E8;
     --background: #F4F6FB;
-    --text: #1E1E2F;
     --line: #D6DBF2;
     --card: #FFFFFF;
 }
@@ -17,7 +16,7 @@
 body {
     font-family: "Archivo", sans-serif;
     background: var(--background);
-    color: var(--text);
+    color: var(--primary);
 }
 
 /* Sticky Navbar */
@@ -35,8 +34,11 @@ body {
     margin: 0 auto;
     padding: 15px 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    background-image: url("images/mountain-divider.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
 }
 
 /* Logo */
@@ -81,6 +83,12 @@ body {
     padding-top: 60px;
 }
 
+p {
+    margin-top: 15px;
+    line-height: 1.6;
+    color: var(--primary);
+}
+
 h1 {
     font-size: 42px;
     color: var(--primary);
@@ -90,6 +98,13 @@ h2 {
     font-size: 28px;
     color: var(--secondary);
     margin-top: 10px;
+    padding: 20px 0px
+}
+
+ul {
+    margin-top: 15px;
+    line-height: 1.6;
+    color: var(--primary);
 }
 
 .subtitle {
@@ -137,6 +152,15 @@ h2 {
 .project-image img {
     width: 260px;
     border-radius: 8px;
+}   
+
+#project-content ul {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+project-content ul li {
+    margin-bottom: 8px;
 }
 
 .cta-button {
@@ -150,6 +174,22 @@ h2 {
 }
 
 .cta-button:hover {
+    background: var(--secondary);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
     background: var(--secondary);
 }
 
@@ -183,4 +223,159 @@ h2 {
         width: 100%;
         max-width: 300px;
     }
+}
+
+/* Mountain Divider Image */
+.mountain-divider img {
+    max-width: 500px;
+    width: 80%;
+    margin: 25px 0 35px 0;
+    opacity: 0.9;
+}
+
+/* Keep your custom navbar style */
+.nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 2px solid var(--line);
+    z-index: 1000;
+}
+
+/* Logo hover animation (dynamic but subtle) */
+.logo img {
+    height: 45px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo img:hover {
+    transform: translateY(-2px) scale(1.05);
+    opacity: 0.9;
+}
+
+/* Profile Image */
+.profile-img {
+    max-width: 220px;
+    border-radius: 12px;
+    border: 2px solid var(--line);
+}
+
+/* Project Images */
+.project-img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 2px solid var(--line);
+}
+
+/* smooth scrolling */
+
+html {
+scroll-behavior: smooth;
+}
+
+
+/* section reveal animation */
+
+section {
+
+opacity: 0;
+transform: translateY(30px);
+transition: all 0.6s ease;
+
+}
+
+.section-visible {
+
+opacity: 1;
+transform: translateY(0);
+
+}
+
+
+/* project button spacing */
+
+.project-links {
+margin-top: 15px;
+}
+
+/* dark mode variables */
+
+body.dark-mode {
+
+--background: #12141a;
+--card: #1c1f26;
+--line: #2c3038;
+
+color: #e6e6e6;
+background: var(--background);
+
+}
+
+
+/* dark mode toggle */
+
+.dark-toggle {
+
+background: none;
+border: none;
+font-size: 20px;
+cursor: pointer;
+
+}
+
+section {
+
+opacity: 0;
+transform: translateY(40px);
+transition: all 0.6s ease;
+
+}
+
+.section-visible {
+
+opacity: 1;
+transform: translateY(0);
+
+}
+
+.project-buttons {
+
+    margin-top: 15px;
+
+}
+
+.btn-primary {
+
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+
+}
+
+.btn-primary:hover {
+
+    background: var(--secondary);
+
+}
+
+.btn-secondary {
+
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 6px;
+
+}
+
+.btn-secondary:hover {
+
+    background: var(--primary);
+    color: white;
+
 }

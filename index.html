@@ -1,71 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- Basic page setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nate Rufenacht | Portfolio</title>
+
+    <title>Nate Rufenacht | Web Developer</title>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
-<nav class="nav">
-    <div class="nav-container">
-        <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="NLR Logo">
-        </a>
+    <!-- Navigation -->
 
-        <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" target="_blank">About</a></li>
-            <li><a href="projects.html" target="_blank">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+    <nav class="nav">
+
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="NLR logo">
+            </a>
+
+            <!-- Navigation links -->
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Dark mode toggle -->
+            <button id="dark-toggle" class="dark-toggle">
+                🌙
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <main class="container">
+
+        <!-- Hero section -->
+
+        <section class="hero">
+
+            <h1>Nate Rufenacht</h1>
+
+            <p class="subtitle">
+                <span id="typing-text"></span>
+            </p>
+
+            <p class="hero-intro">
+                Junior developer building JavaScript applications, API integrations
+                and responsive interfaces.
+            </p>
+
+            <a href="projects.html" class="btn-primary">
+                View Projects
+            </a>
+
+        </section>
+
+
+        <!-- Skills overview -->
+
+        <section class="skills-section">
+
+            <h2>Core Skills</h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">HTML5</div>
+                <div class="skill-card">CSS3</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">APIs</div>
+                <div class="skill-card">Git / GitHub</div>
+                <div class="skill-card">Responsive Design</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Featured projects preview -->
+
+        <section class="featured-projects">
+
+            <h2>Featured Projects</h2>
+
+            <div class="project-preview">
+
+                <div class="project-item">
+
+                    <h3>Weather App</h3>
+
+                    <p>
+                        JavaScript application using a third-party weather API.
+                    </p>
+
+                    <a href="projects.html" class="btn-secondary">
+                        View Project
+                    </a>
+
+                </div>
+
+
+                <div class="project-item">
+
+                    <h3>Todo App</h3>
+
+                    <p>
+                        Task manager using DOM manipulation and CRUD logic.
+                    </p>
+
+                    <a href="projects.html" class="btn-secondary">
+                        View Project
+                    </a>
+
+                </div>
+
+
+                <div class="project-item">
+
+                    <h3>Calculator</h3>
+
+                    <p>
+                        Interactive calculator built with JavaScript events.
+                    </p>
+
+                    <a href="projects.html" class="btn-secondary">
+                        View Project
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer id="contact" class="footer">
+
+        <h2>Contact</h2>
+
+        <ul class="footer-links">
+
+            <li>
+                <a href="https://github.com/naterufenacht" target="_blank">
+                    GitHub
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    LinkedIn
+                </a>
+            </li>
+
+            <li>
+                <a href="mailto:your.email@example.com">
+                    Email
+                </a>
+            </li>
+
         </ul>
-    </div>
-</nav>
 
-<main>
+    </footer>
 
-<header class="container hero">
-	<h1>Nate Rufenacht</h1>
-    <h2>Junior Web Developer</h2>
-    <p class="subtitle">HTML, CSS, JavaScript, APIs & GitHub Projects</p>
-</header>
 
-<div class="divider"></div>
-
-<section class="container intro-layout">
-    <div class="intro-text">
-        <h2>Introduction</h2>
-        <p>empty</p>
-        <p>empty</p>
-
-        <a href="projects.html" target="_blank" class="cta-button">
-            View Projects
-        </a>
-    </div>
-
-    <div class="intro-photo">
-        <img src="images/profile.jpg" alt="Profile Photo">
-    </div>
-</section>
-
-<section class="container content-card">
-    <h2>Current Focus</h2>
-    <p>empty</p>
-</section>
-
-</main>
-
-<footer id="contact" class="container footer">
-    <h2>Contact & Links</h2>
-    <ul class="footer-links">
-        <li><a href="https://github.com/naterufenacht" target="_blank">GitHub</a></li>
-        <li><a href="#" target="_blank">LinkedIn</a></li>
-        <li><a href="mailto:your.email@example.com">Email</a></li>
-    </ul>
-</footer>
+    <!-- Scripts -->
+    <script src="script.js"></script>
 
 </body>
 </html>
