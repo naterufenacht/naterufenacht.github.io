@@ -1,17 +1,16 @@
 // Dark mode toggle
 
-const toggle = document.getElementById("dark-toggle")
+const darkToggle = document.getElementById("dark-toggle")
 
-if (toggle) {
+if (darkToggle) {
 
-    toggle.addEventListener("click", () => {
+    darkToggle.addEventListener("click", () => {
 
         document.body.classList.toggle("dark-mode")
 
-        localStorage.setItem(
-            "darkMode",
-            document.body.classList.contains("dark-mode")
-        )
+        const isDark = document.body.classList.contains("dark-mode")
+
+        localStorage.setItem("darkMode", isDark)
 
     })
 
@@ -21,16 +20,17 @@ if (toggle) {
 // Load saved theme
 
 if (localStorage.getItem("darkMode") === "true") {
-    document.body.classList.add("dark-mode")
-}
 
+    document.body.classList.add("dark-mode")
+
+}
 
 
 // Hero typing effect
 
-const textElement = document.getElementById("typing-text")
+const typingText = document.getElementById("typing-text")
 
-if (textElement) {
+if (typingText) {
 
     const phrases = [
         "Junior Web Developer",
@@ -38,73 +38,84 @@ if (textElement) {
         "Building Practical Applications"
     ]
 
-    let i = 0
-    let j = 0
-    let current = []
+    let phraseIndex = 0
+    let letterIndex = 0
     let deleting = false
 
-    function typeLoop() {
+    function typeEffect() {
 
-        textElement.innerHTML = current.join("")
+        const currentPhrase = phrases[phraseIndex]
 
-        if (!deleting && j < phrases[i].length) {
-            current.push(phrases[i][j])
-            j++
+        if (!deleting) {
+
+            typingText.textContent = currentPhrase.substring(0, letterIndex + 1)
+            letterIndex++
+
+            if (letterIndex === currentPhrase.length) {
+                deleting = true
+                setTimeout(typeEffect, 1200)
+                return
+            }
+
+        } else {
+
+            typingText.textContent = currentPhrase.substring(0, letterIndex - 1)
+            letterIndex--
+
+            if (letterIndex === 0) {
+                deleting = false
+                phraseIndex = (phraseIndex + 1) % phrases.length
+            }
+
         }
 
-        else if (deleting && j > 0) {
-            current.pop()
-            j--
-        }
+        setTimeout(typeEffect, deleting ? 40 : 80)
 
-        else if (!deleting && j === phrases[i].length) {
-            deleting = true
-            setTimeout(typeLoop, 1000)
-            return
-        }
-
-        else if (deleting && j === 0) {
-            deleting = false
-            i = (i + 1) % phrases.length
-        }
-
-        setTimeout(typeLoop, deleting ? 40 : 80)
     }
 
-    typeLoop()
-}
+    typeEffect()
 
+}
 
 
 // Scroll reveal animation
 
 const sections = document.querySelectorAll("section")
 
-const observer = new IntersectionObserver(entries => {
+if (sections.length > 0) {
 
-    entries.forEach(entry => {
+    const observer = new IntersectionObserver((entries) => {
 
-        if (entry.isIntersecting) {
-            entry.target.classList.add("section-visible")
-        }
+        entries.forEach(entry => {
 
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("section-visible")
+
+                observer.unobserve(entry.target)
+
+            }
+
+        })
+
+    }, {
+        threshold: 0.15
     })
 
-}, { threshold: 0.2 })
+    sections.forEach(section => observer.observe(section))
 
-sections.forEach(section => observer.observe(section))
+}
 
 
-
-// Console message for curious recruiters
+// Console message for developers
 
 console.log(`
-Hi 👋
+Hello 👋
 
 This portfolio demonstrates:
 
-• Semantic HTML
-• Responsive CSS
+• Semantic HTML structure
+• Responsive CSS layout
 • JavaScript interactivity
 • API based projects
 

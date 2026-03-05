@@ -1,10 +1,13 @@
 :root {
+
     --primary: #4B3F72;
     --secondary: #3A6EA5;
     --accent: #A9B8E8;
     --background: #F4F6FB;
+    --text: #1E1E2F;
     --line: #D6DBF2;
     --card: #FFFFFF;
+
 }
 
 * {
@@ -14,368 +17,323 @@
 }
 
 body {
+
     font-family: "Archivo", sans-serif;
     background: var(--background);
-    color: var(--primary);
+    color: var(--text);
+    line-height: 1.6;
+
 }
 
-/* Sticky Navbar */
+/* Navigation */
+
 .nav {
+
     position: sticky;
     top: 0;
-    width: 100%;
     background: white;
     border-bottom: 2px solid var(--line);
     z-index: 1000;
+
 }
 
 .nav-container {
+
     max-width: 1100px;
-    margin: 0 auto;
+    margin: auto;
     padding: 15px 20px;
+
     display: flex;
     justify-content: space-between;
-    background-image: url("images/mountain-divider.png");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: cover;
+    align-items: center;
+
 }
 
-/* Logo */
 .logo img {
+
     height: 45px;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease;
+
 }
 
-/* Dynamic Hover Effect */
 .logo img:hover {
-    transform: translateY(-3px) scale(1.05);
-    filter: brightness(1.1);
+
+    transform: scale(1.05);
+
 }
 
-/* Nav Links */
 .nav-list {
+
     list-style: none;
     display: flex;
     gap: 30px;
+
 }
 
 .nav-list a {
+
     text-decoration: none;
     color: var(--primary);
     font-weight: 500;
-    position: relative;
+
 }
 
 .nav-list a:hover {
+
     color: var(--secondary);
+
 }
 
 /* Layout */
+
 .container {
+
     max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px 20px;
+    margin: auto;
+    padding: 40px 20px;
+
 }
+
+/* Hero */
 
 .hero {
+
     text-align: center;
-    padding-top: 60px;
+    margin-top: 40px;
+
 }
 
-p {
-    margin-top: 15px;
-    line-height: 1.6;
-    color: var(--primary);
-}
+.hero h1 {
 
-h1 {
     font-size: 42px;
     color: var(--primary);
+
 }
 
-h2 {
-    font-size: 28px;
-    color: var(--secondary);
-    margin-top: 10px;
-    padding: 20px 0px
-}
+.hero-section {
 
-ul {
-    margin-top: 15px;
-    line-height: 1.6;
-    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-top: 40px;
+
 }
 
 .subtitle {
+
     color: var(--secondary);
     margin-top: 10px;
+
 }
 
 .divider {
+
     height: 4px;
     background: var(--primary);
     margin: 30px 0;
+
 }
 
-.intro-layout {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    background: var(--card);
-    border-left: 6px solid var(--primary);
-    border-radius: 10px;
-}
-
-.intro-photo img {
-    width: 180px;
-    border-radius: 10px;
-}
+/* Cards */
 
 .content-card {
+
     background: var(--card);
-    border-left: 6px solid var(--primary);
+    padding: 30px;
     border-radius: 10px;
+    border-left: 6px solid var(--primary);
     margin-top: 20px;
+
+}
+
+/* Profile */
+
+.profile-img {
+
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+
+}
+
+/* Projects */
+
+.project-grid {
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
 }
 
 .project-card {
+
     display: flex;
     gap: 30px;
-    align-items: center;
     background: var(--card);
-    border-left: 6px solid var(--secondary);
+    padding: 25px;
     border-radius: 10px;
-    margin-bottom: 25px;
+    border-left: 6px solid var(--secondary);
+    align-items: center;
+
 }
 
-.project-image img {
+.project-img {
+
     width: 260px;
     border-radius: 8px;
-}   
 
-#project-content ul {
-    margin-top: 10px;
-    line-height: 1.6;
 }
 
-project-content ul li {
-    margin-bottom: 8px;
+.project-content h2 {
+
+    color: var(--secondary);
+
 }
 
-.cta-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: var(--primary);
-    color: white;
+.project-content ul {
+
+    margin: 10px 0 15px 20px;
+
+}
+
+/* Buttons */
+
+.project-buttons {
+
+    display: flex;
+    gap: 10px;
+
+}
+
+.project-card:hover {
+
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+
+}
+
+.btn-demo,
+.btn-github {
+
+    padding: 8px 16px;
     text-decoration: none;
     border-radius: 6px;
+    font-weight: 500;
 }
 
-.cta-button:hover {
-    background: var(--secondary);
-}
+.btn-demo {
 
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
     background: var(--primary);
     color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
+
 }
 
-.btn:hover {
+.btn-demo:hover {
+
     background: var(--secondary);
+
 }
+
+.btn-github {
+
+    border: 2px solid var(--primary);
+    color: var(--primary);
+
+}
+
+.btn-github:hover {
+
+    background: var(--primary);
+    color: white;
+
+}
+
+.btn-demo,
+.btn-github {
+
+    transition: all 0.2s ease;
+
+}
+
+/* Footer */
 
 .footer {
+
     text-align: center;
     border-top: 2px solid var(--line);
-    margin-top: 40px;
+    padding: 30px 0;
+    margin-top: 50px;
+
 }
 
 .footer-links {
+
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 25px;
+    margin-top: 10px;
+
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-    .nav-list {
-        gap: 15px;
-        font-size: 14px;
-    }
+.footer-links a {
 
-    .intro-layout,
+    text-decoration: none;
+    color: var(--primary);
+
+}
+
+.dark-mode {
+
+    --background: #121212;
+    --text: #f5f5f5;
+    --card: #1e1e1e;
+    --line: #333;
+
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
     .project-card {
+
         flex-direction: column;
         text-align: center;
+
     }
 
-    .project-image img {
+    .project-img {
+
         width: 100%;
         max-width: 300px;
+
     }
-}
-
-/* Mountain Divider Image */
-.mountain-divider img {
-    max-width: 500px;
-    width: 80%;
-    margin: 25px 0 35px 0;
-    opacity: 0.9;
-}
-
-/* Keep your custom navbar style */
-.nav {
-    position: sticky;
-    top: 0;
-    background: white;
-    border-bottom: 2px solid var(--line);
-    z-index: 1000;
-}
-
-/* Logo hover animation (dynamic but subtle) */
-.logo img {
-    height: 45px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.logo img:hover {
-    transform: translateY(-2px) scale(1.05);
-    opacity: 0.9;
-}
-
-/* Profile Image */
-.profile-img {
-    max-width: 220px;
-    border-radius: 12px;
-    border: 2px solid var(--line);
-}
-
-/* Project Images */
-.project-img {
-    max-width: 100%;
-    border-radius: 10px;
-    border: 2px solid var(--line);
-}
-
-/* smooth scrolling */
-
-html {
-scroll-behavior: smooth;
-}
-
-
-/* section reveal animation */
-
-section {
-
-opacity: 0;
-transform: translateY(30px);
-transition: all 0.6s ease;
 
 }
 
-.section-visible {
+@media (max-width: 768px) {
 
-opacity: 1;
-transform: translateY(0);
+    .hero-section {
 
-}
+        flex-direction: column;
+        text-align: center;
 
-
-/* project button spacing */
-
-.project-links {
-margin-top: 15px;
-}
-
-/* dark mode variables */
-
-body.dark-mode {
-
---background: #12141a;
---card: #1c1f26;
---line: #2c3038;
-
-color: #e6e6e6;
-background: var(--background);
-
-}
-
-
-/* dark mode toggle */
-
-.dark-toggle {
-
-background: none;
-border: none;
-font-size: 20px;
-cursor: pointer;
+    }
 
 }
 
 section {
-
-opacity: 0;
-transform: translateY(40px);
-transition: all 0.6s ease;
-
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
 }
 
 .section-visible {
-
-opacity: 1;
-transform: translateY(0);
-
-}
-
-.project-buttons {
-
-    margin-top: 15px;
-
-}
-
-.btn-primary {
-
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--primary);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-
-}
-
-.btn-primary:hover {
-
-    background: var(--secondary);
-
-}
-
-.btn-secondary {
-
-    display: inline-block;
-    padding: 10px 20px;
-    margin-left: 10px;
-    border: 2px solid var(--primary);
-    color: var(--primary);
-    text-decoration: none;
-    border-radius: 6px;
-
-}
-
-.btn-secondary:hover {
-
-    background: var(--primary);
-    color: white;
-
+    opacity: 1;
+    transform: translateY(0);
 }
