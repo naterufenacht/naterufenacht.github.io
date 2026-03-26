@@ -280,6 +280,12 @@ body {
 
 }
 
+.subtitle {
+    font-weight: 500;
+    color: #6c63ff;
+    letter-spacing: 0.5px;
+}
+
 .footer-links a {
 
     text-decoration: none;
