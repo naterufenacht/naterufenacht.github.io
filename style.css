@@ -282,7 +282,7 @@ body {
 
 .subtitle {
     font-weight: 500;
-    color: #6c63ff;
+    color: var(--secondary);
     letter-spacing: 0.5px;
 }
 
