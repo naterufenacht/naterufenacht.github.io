@@ -194,6 +194,30 @@ body {
 
 }
 
+.cta-button {
+
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+
+    border-radius: 6px;
+    transition: all 0.2s ease;
+
+}
+
+.cta-button:hover {
+
+    background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+
+}
+
 .project-content ul {
 
     margin: 10px 0 15px 20px;
